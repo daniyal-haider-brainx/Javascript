@@ -1,0 +1,85 @@
+/* ------------------Main Screen---------------- */
+.main {
+   
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 965px;
+  }
+  /* ------------------Container---------------- */
+  .container 
+  {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: 500px;
+    text-align: center;
+    border: 8px solid gainsboro;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ------------------Heading---------------- */
+.heading_child {
+    margin-bottom: 20px;
+}
+
+.heading {
+    font-size: 24px;
+    color: #333;
+}
+/* ------------------Labels--------------- */
+.day,
+.month,
+.year {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+/* ------------------Input Tag---------------- */
+input[type="text"]
+ {
+    width: 80px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+}
+
+input[type="text"]:focus
+ {
+    border-color: #555;
+}
+
+/* ------------------Button--------------- */
+.button 
+{
+    margin-top: 20px;
+}
+
+.button button 
+{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button button:hover 
+{
+    background-color: #45a049;
+}
