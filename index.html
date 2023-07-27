@@ -12,31 +12,34 @@
 <body>
     <!---------------------------- Main Screen ---------------------------->
     <div class="main">
-            <!---------------------------- Flex Container---------------------------->
+        <!-- Flex Container -->
         <div class="container">
-                <!---------------------------- Heading ---------------------------->
-            <div class="heading_child">
-                <h1 class="heading">Age Verification</h1>
-            </div>
-                <!---------------------------- Inputs---------------------------->
-            <div class="day">
-                <label for="day">Day:</label>
-                <input type="text" id="day" min="1" max="31">
-            </div>
-            <div class="month">
-                <label for="month">Month:</label>
-                <input type="text" id="month" min="1" max="12">
-            </div>
-            <div class="year">
-                <label for="year">Year:</label>
-                <input type="text" id="year" min="1900" max="2023">
-            </div>
-                <!---------------------------- Verify Button---------------------------->
-                <div class="button">
-                    <button id="verifyButton">Go</button>
-                </div>
+          <!-- Heading -->
+          <div class="heading_child">
+            <h1 class="heading">Age Verification</h1>
+          </div>
+    
+          <!-- Inputs -->
+          <div class="day">
+            <label for="day">Day:</label>
+            <input type="text" id="day" min="1" max="31">
+          </div>
+          <div class="month">
+            <label for="month">Month:</label>
+            <input type="text" id="month" min="1" max="12">
+          </div>
+          <div class="year">
+            <label for="year">Year:</label>
+            <input type="text" id="year" min="1900" max="2023">
+          </div>
+    
+          <!-- Verify Button -->
+          <div class="button">
+            <button id="verifyButton" onclick="verifyAge()">Go</button>
+          </div>
         </div>
-    </div>
+      </div>
+    
     <script src="assets/Javascript/script.js"></script>
 </body>
 

@@ -1,22 +1,24 @@
-// Attach event handler to the button
-document.getElementById('verifyButton').addEventListener('click', verifyAge);
-
-// Function to verify age
 function verifyAge() {
-  // Storing inputs on the basis of ID
   const day = parseInt(document.getElementById('day').value);
   const month = parseInt(document.getElementById('month').value);
   const year = parseInt(document.getElementById('year').value);
+  // Check if any of the input fields are empty
+  if (isNaN(day) || isNaN(month) || isNaN(year)) {
+    alert("Please enter a valid date of birth.");
+    return;
+  }
+  // Validate days for specific months
+  const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  // Every year that is exactly divisible by four is a leap year, except for years 
+  //that are exactly divisible by 100, but these centurial years are leap years if 
+  //they are exactly divisible by 400.
+  const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+  if (month === 2) {
+    daysInMonth[month] = isLeapYear ? 29 : 28;
+  }
 
-  // Validating day, month, and year inputs
-  if (isNaN(day) || day < 1 || day > 31) {
-    alert("Invalid Day. Please enter a valid day between 1 and 31.");
-    return;
-  } else if (isNaN(month) || month < 1 || month > 12) {
-    alert("Invalid Month. Please enter a valid month between 1 and 12.");
-    return;
-  } else if (isNaN(year) || year < 1900 || year > 2023) {
-    alert("Invalid Year. Please enter a valid year between 1900 and 2023.");
+  if (day < 1 || day > daysInMonth[month]) {
+    alert(`Invalid Day for the selected month. Please enter a valid day between 1 and ${daysInMonth[month]}.`);
     return;
   }
 
